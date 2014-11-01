@@ -14,7 +14,8 @@
   {
 	"remote": "cm",
     "repository": "CyanogenMod/android_hardware_sony_DASH",
-    "target_path": "hardware/sony/DASH"
+    "target_path": "hardware/sony/DASH",
+	"revision": "cm-11.0"
   },
   {
     "remote": "cm",
@@ -27,10 +28,5 @@
     "repository": "Ultrax5/android_kernel_sony_msm8960t",
     "target_path": "kernel/sony/msm8960t",
     "revision": "master_jb-4.3"
-  },
-  {
-    "remote": "cm",
-    "repository": "android_hardware_qcom_fm",
-    "target_path": "hardware/qcom/fm"
   }
 ]
