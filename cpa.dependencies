@@ -1,21 +1,21 @@
 [
   {
     "remote": "cm",
-	"repository": "CyanogenMod/android_device_sony_qcom-common",
+    "repository": "CyanogenMod/android_device_sony_qcom-common",
     "target_path": "device/sony/qcom-common",
-	"revision": "cm-11.0"
+    "revision": "cm-11.0"
   },
   {
     "remote": "cm",
-	"repository": "CyanogenMod/android_device_sony_common",
+    "repository": "CyanogenMod/android_device_sony_common",
     "target_path": "device/sony/common",
-	"revision": "cm-11.0"
+    "revision": "cm-11.0"
   },
   {
-	"remote": "cm",
+    "remote": "cm",
     "repository": "CyanogenMod/android_hardware_sony_DASH",
     "target_path": "hardware/sony/DASH",
-	"revision": "cm-11.0"
+    "revision": "cm-11.0"
   },
   {
     "remote": "cm",
