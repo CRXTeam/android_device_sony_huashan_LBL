@@ -22,7 +22,7 @@
     "repository": "Ultrax5/android_vendor_sony",
     "target_path": "vendor/sony",
     "revision": "master"
-  }
+  },
   {
     "remote": "cm",
     "repository": "Ultrax5/android_kernel_sony_msm8960t",
