@@ -14,7 +14,7 @@
 
 # Product-specific compile-time definitions.
 
-BOARD_EGL_CFG := device/sony/huashan/rootdir/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/sony/huashanlbl/rootdir/system/lib/egl/egl.cfg
 
 # inherit from Sony common
 include device/sony/common/BoardConfigCommon.mk
@@ -23,14 +23,14 @@ include device/sony/common/BoardConfigCommon.mk
 include device/sony/qcom-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/sony/huashan/BoardConfigVendor.mk
+-include vendor/sony/huashanlbl/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
-TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
+TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashanlbl
+TARGET_SPECIFIC_HEADER_PATH += device/sony/huashanlbl/include
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/sony/huashan
+TARGET_RELEASETOOLS_EXTENSIONS := device/sony/huashanlbl
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8960t
@@ -80,7 +80,7 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 BOARD_USE_SONY_MACUPDATE := true
 
-BOARD_HARDWARE_CLASS := device/sony/huashan/cmhw
+BOARD_HARDWARE_CLASS := device/sony/huashanlbl/cmhw
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -93,7 +93,7 @@ TARGET_NO_RPC := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/huashan/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/huashanlbl/bluetooth
 
 # NFC
 BOARD_HAVE_NFC := true
@@ -109,10 +109,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # Custom boot
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_CUSTOM_BOOTIMG_MK := device/sony/huashan/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/sony/huashanlbl/custombootimg.mk
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
-TARGET_RECOVERY_FSTAB := device/sony/huashan/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/sony/huashanlbl/rootdir/fstab.qcom
 RECOVERY_FSTAB_VERSION := 2
 
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -157,7 +157,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
 BOARD_SEPOLICY_DIRS += \
-    device/sony/huashan/sepolicy
+    device/sony/huashanlbl/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
