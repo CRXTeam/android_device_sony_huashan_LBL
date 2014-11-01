@@ -20,7 +20,7 @@
   {
     "remote": "cm",
     "repository": "Ultrax5/android_vendor_sony",
-    "target_path": "vendor/sony",
+    "target_path": "vendor/sonylbl",
     "revision": "master"
   },
   {
