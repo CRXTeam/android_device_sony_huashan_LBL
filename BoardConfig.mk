@@ -23,7 +23,7 @@ include device/sony/common/BoardConfigCommon.mk
 include device/sony/qcom-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/sony/huashan/BoardConfigVendor.mk
+-include vendor/sonylbl/huashan/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashanlbl
