@@ -1,37 +1,37 @@
 [
   {
     "remote": "cm",
-    "repository": "CyanogenMod/android_device_sony_qcom-common",
-    "target_path": "device/sony/qcom-common",
+    "repository": "android_device_sony_msm8960-common",
+    "target_path": "device/sony/msm8960-common",
     "revision": "cm-11.0"
   },
   {
     "remote": "cm",
-    "repository": "CyanogenMod/android_device_sony_common",
+    "repository": "android_device_sony_common",
     "target_path": "device/sony/common",
     "revision": "cm-11.0"
   },
   {
     "remote": "cm",
-    "repository": "CyanogenMod/android_hardware_sony_DASH",
+    "repository": "android_hardware_sony_DASH",
     "target_path": "hardware/sony/DASH",
     "revision": "cm-11.0"
   },
   {
-    "remote": "cm",
+    "remote": "github",
     "repository": "Ultrax5/android_vendor_sony",
     "target_path": "vendor/sonylbl",
     "revision": "master"
   },
   {
-    "remote": "cm",
+    "remote": "github",
     "repository": "Ultrax5/android_kernel_sony_msm8960t",
     "target_path": "kernel/sony/msm8960t",
     "revision": "master_jb-4.3"
   },
   {
     "remote": "cm",
-    "repository": "CyanogenMod/android_hardware_qcom_fm",
+    "repository": "android_hardware_qcom_fm",
     "target_path": "hardware/qcom/fm",
     "revision": "cm-11.0"
   }
