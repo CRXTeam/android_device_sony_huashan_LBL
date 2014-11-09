@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Product-specific compile-time definitions.
-
-BOARD_EGL_CFG := device/sony/huashanlbl/rootdir/system/lib/egl/egl.cfg
-
 # inherit from Sony common
 include device/sony/common/BoardConfigCommon.mk
 
@@ -26,11 +22,9 @@ include device/sony/qcom-common/BoardConfigCommon.mk
 -include vendor/sonylbl/huashan/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashanlbl
-TARGET_SPECIFIC_HEADER_PATH += device/sony/huashanlbl/include
+TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/sony/huashanlbl
+TARGET_SPECIFIC_HEADER_PATH += device/sony/huashanlbl/include
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8960t
@@ -80,7 +74,7 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 BOARD_USE_SONY_MACUPDATE := true
 
-BOARD_HARDWARE_CLASS := device/sony/huashanlbl/cmhw
+BOARD_HARDWARE_CLASS += device/sony/huashanlbl/cmhw
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -113,7 +107,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/sony/huashanlbl/custombootimg.mk
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 TARGET_RECOVERY_FSTAB := device/sony/huashanlbl/rootdir/fstab.qcom
-RECOVERY_FSTAB_VERSION := 2
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -153,6 +146,9 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 
+# Override healthd HAL
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
+
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
@@ -187,4 +183,3 @@ BOARD_SEPOLICY_UNION += \
     ueventd.te \
     vold.te \
     wpa_supplicant.te
-

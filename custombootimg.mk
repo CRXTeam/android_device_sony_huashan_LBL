@@ -31,14 +31,17 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(uncompressed_ramdisk) $(r
 	$(hide) python $(MKELF) -o $@ $(PRODUCT_OUT)/kernel@0x80208000 $(PRODUCT_OUT)/combinedroot.fs@0x81900000,ramdisk vendor/sonylbl/huashan/proprietary/boot/RPM.bin@0x00020000,rpm device/sony/huashanlbl/rootdir/cmdline.txt@cmdline
 
 	$(hide) ln -f $(INSTALLED_BOOTIMAGE_TARGET) $(PRODUCT_OUT)/boot.elf
-
-	$(hide) rm -fr $(INSTALLED_BOOTIMAGE_TARGET)
-	$(hide) rm -fr $(PRODUCT_OUT)/boot.elf
 	$(hide) cp -r vendor/sonylbl/huashan/proprietary/kernel/boot.img $(PRODUCT_OUT)
 
+	$(hide) cp $(PRODUCT_OUT)/system/lib/modules/cpufreq_wheatley.ko vendor/sonylbl/huashan/proprietary/lib/modules/
+
+	$(hide) rm -fr $(PRODUCT_OUT)/system/lib/modules
 	$(hide) cp -r vendor/sonylbl/huashan/proprietary/lib/modules $(PRODUCT_OUT)/system/lib
-	$(hide) cd $(PRODUCT_OUT)/root && chmod 644 `ls $(PRODUCT_OUT)/root` && chmod 755 $(PRODUCT_OUT)/root/data && chmod 755 $(PRODUCT_OUT)/root/dev && chmod 755 $(PRODUCT_OUT)/root/proc && chmod 755 $(PRODUCT_OUT)/root/sbin && chmod 755 $(PRODUCT_OUT)/root/sys && chmod 755 $(PRODUCT_OUT)/root/system && chmod 755 $(PRODUCT_OUT)/root/init && chmod 755 $(PRODUCT_OUT)/root/init.qcom.syspart_fixup.sh && tar -cvf ramdisk.tar `ls $(PRODUCT_OUT)/root`
+	$(hide) rm vendor/sonylbl/huashan/proprietary/lib/modules/cpufreq_wheatley.ko
+	$(hide) cd $(PRODUCT_OUT)/root && tar -cvf ramdisk.tar `ls $(PRODUCT_OUT)/root`
 	$(hide) mv $(PRODUCT_OUT)/root/ramdisk.tar $(PRODUCT_OUT)/system/bin/ramdisk.tar
+	$(hide) cd $(PRODUCT_OUT)/recovery/root && tar -cvf cwm.tar `ls $(PRODUCT_OUT)/recovery/root`
+	$(hide) mv $(PRODUCT_OUT)/recovery/root/cwm.tar $(PRODUCT_OUT)/system/bin/cwm.tar
 
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \

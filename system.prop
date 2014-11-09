@@ -19,7 +19,6 @@ persist.timed.enable=true
 
 # Graphics
 ro.sf.lcd_density=320
-debug.composition.type=c2d
 
 # System props for audio
 qcom.audio.init=complete
@@ -30,8 +29,9 @@ persist.audio.lowlatency.rec=false
 lpa.decode=true
 lpa.use-stagefright=true
 
-#FM Transmitter
-ro.fm.transmitter=true
+# FM radio
+ro.fm.analogpath.supported=false
+ro.fm.transmitter=false
 
 # System prop to select audio resampler quality
 af.resampler.quality=255
@@ -94,3 +94,7 @@ ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x4
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
+
+# stirctmode
+persist.sys.strictmode.visual=0
+persist.sys.strictmode.disable=1
