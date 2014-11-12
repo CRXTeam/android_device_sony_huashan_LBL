@@ -19,7 +19,7 @@
   },
   {
     "remote": "github",
-    "repository": "Zenderable/android_vendor_sony",
+    "repository": "Zenderable/android_vendor_sonylbl",
     "target_path": "vendor/sonylbl",
     "revision": "kitkat"
   },
